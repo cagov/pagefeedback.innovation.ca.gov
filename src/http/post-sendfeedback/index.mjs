@@ -42,6 +42,9 @@ export async function handler(req) {
     insertObject.helpful = helpful_bool;
     insertObject.comments = postData.comments;
 
+    console.log('inserting')
+    console.log(insertObject);
+
     // store the event object in DynamoDB
     let feedbackItem = await feedback.put(insertObject);
 
